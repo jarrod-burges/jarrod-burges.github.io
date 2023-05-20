@@ -30,7 +30,7 @@ twitter_username:
 github_username:  jarrod-burges
 
 # Build settings
-remote_theme: modern-resume-theme
+remote_theme: sproogen/modern-resume-theme
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
