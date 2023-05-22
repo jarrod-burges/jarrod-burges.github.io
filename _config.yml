@@ -1,33 +1,15 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Jarrod Burges
+version: 2
+name: Jarrod Burges
+title: Undergraduate Student / Community Service Officer
 email: jburges@csu.fullerton.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "jarrod-burges.github.io" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://jarrod-burges.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jarrod-burges
+darkmode: false #(options: true, false, never)
 
 # Build settings
 remote_theme: sproogen/modern-resume-theme
@@ -54,3 +36,95 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+about_profile_image: images/profile.jpeg
+about_content: | # this will include new lines to allow paragraphs
+  I'm pursuing a Geology and Computer Science double major at California State University, Fullerton, where I'm working on an undergraduate thesis alongside an assistant professor of Geology and a professor of Computer Science. Our research is focused on developing a Python-based application to streamline the workflow and time management of geochronologists working with detrital zircon datasets.
+
+  In Summer 2023, I'll be working as a field assistant on academic research in the India-Asia suture zone in Tibet, China for six weeks. Additionally, I currently serve as a student community service officer, patrolling designated areas and securing the campus.
+
+  I plan to use my diverse background and experience to pursue a career as a federal geologist in the geoinformatics field. My goal is to help create and manage geological information networks to address issues related to GIS, geospatial, and other geotechnical challenges.
+    
+content:
+  - title: Projects
+    layout: list
+    content:
+      - layout: left
+        border: weak
+        title: Detrital Zircon Database Manager
+        link: Geochronology_Code.github.io
+        link_text: Project Website
+        additional_links:
+          - title:  Github page for project
+            icon: fab fa-github
+            url: https://github.com/kathrynmetcalf/Geochronology_Code
+          - title:  Kate Metcalf
+            icon: fas fa-school
+            url: https://www.fullerton.edu/geology/people/faculty/kmetcalf.php
+          - title:  Kate Metcalf
+            icon: fas fa-book
+            url: localhost:4000/detritalzirconabstract.pdf
+        description: |
+          An application has been developed to address challenges in organizing and managing diverse detrital zircon datasets. It automatically assumes data formatting and stores it in a personalized SQL database, with a step-by-step wizard for user confirmation. Custom tags, integration with online databases, and export options enhance usability. The application supports filtering, plotting, splitting, merging, and sharing of the SQL database. It emphasizes open-source version control for user feedback and contributions. While AI tools like Chat GPT are intriguing, this application aims to optimize research methods for geochronologists and seamlessly integrate with existing tools. It streamlines data management, aids analysis, and ensures compatibility. After closed alpha development, it will benefit geochronologists and facilitate integration with established tools.
+
+  - title: Education
+    layout: list
+    content:
+      - layout: top-left
+        title: California State University, Fullerton
+        sub_title: B.S. Geology and Computer Science
+        caption: 2018 - Present
+        description: |
+          Double major in Computer Science and Geology while working part-time on campus. Relevant coursework include: SQL, Into to Data Science, Petrography, Mineralogy, Algorithms, Python
+  - title: Experience
+    layout: list
+    content:
+      - layout: top-right
+        title: Department of Geological Sciences, CSUF
+        sub_title: Field Assistant | Lhasa, Tibet
+        caption: June 2023 - July 2023 (6 Weeks)
+        description: |
+          As a Field Assistant in Tibet, I conducted extensive field research and collected data to support academic studies on environmental and geological phenomena. This included exploring remote locations, analyzing samples, and contributing to the understanding of the unique geological features and environmental conditions in the region. I worked under my undergraduate thesis advisor, [Kate Metcalf](https://www.fullerton.edu/geology/people/faculty/kmetcalf.php), along with three collegues from University of Alabama and one graduate student from the [Institute of Tibetan Plateau Research Chinese Academy of Sciences](http://english.itpcas.cas.cn)
+      - layout: left
+        title: California State University, Fullerton, Police Department
+        caption: June 2022 - Present
+        description: |
+          A compoent of the deparment's student only portion of the crime prevention unit tasked as our mission statement says. "To act as the eyes and ears of the University Police Department and ensure the safety of the campus community at CSUF by providing dedicated service while establishing a working relationship between campus students, faculty, staff, and visitors"
+        
+      - layout: left
+        sub_title: CSO Supervisor
+        caption: June 2023 - Present
+        description: |
+          Overseeing and manager of around 30 student Community Service Officers (CSO). As a Supervisor my primary duties included assigning and delegating responsabilties, creating and ensuring the adherance to all policies and procedures, implementing new strategies to improve the program, creating schedules, managing payrolls, and enacting discpilnary actions.
+      - layout: left
+        sub_title: Field Training Officer
+        caption: August 2022 - June 2023
+        description: |
+          A Field Training Officer (FTO) is responsible for providing on-the-job training and mentorship to new student Community Service Officers (CSO). They guide and evaluate trainees' performance, teach them proper procedures and protocols, and ensure their readiness for independent duty through hands-on training and assessment. As an FTO special duties are assigned to help maintain overall program success. Mine included public outreach, event planning and facilitaing, as well as, helping with techical computer issues
+      - layout: right
+        title: GMU Geotechnical
+        sub_title: Lab Assistant
+        caption: December 2022 - January 2023 (Winter Break Temporary Job)
+        description: |
+          As a Lab Assistant I conducted comprehensive soil analysis' to state and federally regulated procedures. Analysis' included atterberg limits, maximum density curves, moisture contents, R-values, grain size seive analysis, and soil classifcations. Maintaining accurate records and filing systems with values by Lab Manager to be re-run next day if too high of an error.
+
+      - layout: left
+        sub_title: Community Service Officer
+        caption: June 2022 - August 2023
+        description: |
+          A Community Service Officer (CSO) is a student-only non-sworn position within CSUF Police Department that focuses on community engagement, public safety, and support services. CSOs often patrol assigned areas, lockup campus after all classes conclude, respond to non-emergency calls, and engage with the community to address concerns and promote a safe environment. They provide a visible presence, assist with crime prevention initiatives, and act as a liaison between the primarily student community and law enforcement.
+      - layout: left
+        title: Coffee Bean and Tea Leaf
+        sub_title: Barista
+        caption: June 2020 - August 2022
+        description: |
+          Provided me neccessary skills that are well-equiped for all pursueant jobs: Customer Service, Multitasking, Attention to Detail, Time Management, Problem Solving, Teamwork, Cleanliness and Hygiene, Sales and Upselling
+
+  - title: Interests
+    layout: text
+    content: |
+      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+
+      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+
+# Footer
+footer_show_references: true
