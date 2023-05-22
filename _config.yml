@@ -2,14 +2,14 @@ version: 2
 name: Jarrod Burges
 title: Undergraduate Student / Community Service Officer
 email: jburges@csu.fullerton.edu
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://jarrod-burges.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
+url: "https://jarrod-burges.github.io"
 github_username:  jarrod-burges
-darkmode: false #(options: true, false, never)
+darkmode: false
 
 # Build settings
 remote_theme: sproogen/modern-resume-theme
@@ -17,25 +17,6 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   I'm pursuing a Geology and Computer Science double major at California State University, Fullerton, where I'm working on an undergraduate thesis alongside an assistant professor of Geology and a professor of Computer Science. Our research is focused on developing a Python-based application to streamline the workflow and time management of geochronologists working with detrital zircon datasets.
@@ -62,7 +43,7 @@ content:
             url: https://www.fullerton.edu/geology/people/faculty/kmetcalf.php
           - title:  Kate Metcalf
             icon: fas fa-book
-            url: localhost:4000/detritalzirconabstract.pdf
+            url: jarrod-burges.github.io/detritalzirconabstract.pdf
         description: |
           An application has been developed to address challenges in organizing and managing diverse detrital zircon datasets. It automatically assumes data formatting and stores it in a personalized SQL database, with a step-by-step wizard for user confirmation. Custom tags, integration with online databases, and export options enhance usability. The application supports filtering, plotting, splitting, merging, and sharing of the SQL database. It emphasizes open-source version control for user feedback and contributions. While AI tools like Chat GPT are intriguing, this application aims to optimize research methods for geochronologists and seamlessly integrate with existing tools. It streamlines data management, aids analysis, and ensures compatibility. After closed alpha development, it will benefit geochronologists and facilitate integration with established tools.
 
@@ -119,12 +100,14 @@ content:
         description: |
           Provided me neccessary skills that are well-equiped for all pursueant jobs: Customer Service, Multitasking, Attention to Detail, Time Management, Problem Solving, Teamwork, Cleanliness and Hygiene, Sales and Upselling
 
-  - title: Interests
-    layout: text
-    content: |
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+  - title: Professional Conferences Attended
+    layout: list
+    content:
+      - layout: middle
+        sub_title: Geological Socity of America, Cordilleran Section
+        caption: May 16th - 19th
+        description: |
+          Accepted and presented on my Detrital Zircon Database Management application. During the T30 Undergraduate Poster Session. [Abstract](https://gsa.confex.com/gsa/2023CD/meetingapp.cgi/Paper/387406) was presented on and my poster is seen [here](jarrod-burges.github.io/Burges_Jarrod_GSA_2023.png)
 
 # Footer
 footer_show_references: true
