@@ -23,7 +23,7 @@ about_content: | # this will include new lines to allow paragraphs
 
   In Summer 2023, I'll be working as a field assistant on academic research in the India-Asia suture zone in Tibet, China for six weeks. Additionally, I currently serve as a student community service officer, patrolling designated areas and securing the campus.
 
-  I plan to use my diverse background and experience to pursue a career as a federal geologist in the geoinformatics field. My goal is to help create and manage geological information networks to address issues related to GIS, geospatial, and other geotechnical challenges.
+  I plan to use my diverse background and experience to pursue a career as a federal geologist in the Geoinformatics field. My goal is to help create and manage geological information networks to address issues related to GIS, geospatial, and other geotechnical challenges.
     
 content:
   - title: Projects
@@ -55,59 +55,63 @@ content:
         sub_title: B.S. Geology and Computer Science
         caption: 2018 - Present
         description: |
-          Double major in Computer Science and Geology while working part-time on campus. Relevant coursework include: SQL, Into to Data Science, Petrography, Mineralogy, Algorithms, Python
+          Double major in Computer Science and Geology while working part-time on campus. Relevant coursework include: SQL, Into to Data Science, Petrography, Mineralogy, Algorithms, Python.
   - title: Experience
     layout: list
     content:
-      - layout: top-right
+      - layout: right
         title: Department of Geological Sciences, CSUF
         sub_title: Field Assistant | Lhasa, Tibet
-        caption: June 2023 - July 2023 (6 Weeks)
+        caption: July 2023 (4 Weeks)
         description: |
-          As a Field Assistant in Tibet, I conducted extensive field research and collected data to support academic studies on environmental and geological phenomena. This included exploring remote locations, analyzing samples, and contributing to the understanding of the unique geological features and environmental conditions in the region. I worked under my undergraduate thesis advisor, [Kate Metcalf](https://www.fullerton.edu/geology/people/faculty/kmetcalf.php), along with three collegues from University of Alabama and one graduate student from the [Institute of Tibetan Plateau Research Chinese Academy of Sciences](http://english.itpcas.cas.cn)
+          As a Field Assistant in Tibet, I assisted with extensive field research and collected field samples to support academic studies on environmental and geological phenomena. This included exploring remote locations, analyzing samples, and contributing to the understanding of the unique geological features conditions in the region. I worked under my undergraduate thesis advisor, [Kate Metcalf](https://www.fullerton.edu/geology/people/faculty/kmetcalf.php), along with [Delores Robinson](https://geo.ua.edu/people/delores-robinson/) from University of Alabama and one graduate student from the [Institute of Tibetan Plateau Research Chinese Academy of Sciences](http://english.itpcas.cas.cn).
+        border: weak
       - layout: left
         title: California State University, Fullerton, Police Department
         caption: June 2022 - Present
         description: |
-          A compoent of the deparment's student only portion of the crime prevention unit tasked as our mission statement says. "To act as the eyes and ears of the University Police Department and ensure the safety of the campus community at CSUF by providing dedicated service while establishing a working relationship between campus students, faculty, staff, and visitors"
+          A compoent of the department's student only portion of the crime prevention unit tasked as our mission statement says. "To act as the eyes and ears of the University Police Department and ensure the safety of the campus community at CSUF by providing dedicated service while establishing a working relationship between campus students, faculty, staff, and visitors".
         
       - layout: left
         sub_title: CSO Supervisor
         caption: June 2023 - Present
         description: |
-          Overseeing and manager of around 30 student Community Service Officers (CSO). As a Supervisor my primary duties included assigning and delegating responsabilties, creating and ensuring the adherance to all policies and procedures, implementing new strategies to improve the program, creating schedules, managing payrolls, and enacting discpilnary actions.
+          Overseeing and manager of 35 student Community Service Officers (CSO). As a Supervisor my primary duties included assigning and delegating responsibilities, creating and ensuring the adherence of all policies and procedures, implementing new strategies to improve the program, creating schedules, managing payrolls, and enacting disciplinary actions.
       - layout: left
         sub_title: Field Training Officer
         caption: August 2022 - June 2023
         description: |
-          A Field Training Officer (FTO) is responsible for providing on-the-job training and mentorship to new student Community Service Officers (CSO). They guide and evaluate trainees' performance, teach them proper procedures and protocols, and ensure their readiness for independent duty through hands-on training and assessment. As an FTO special duties are assigned to help maintain overall program success. Mine included public outreach, event planning and facilitaing, as well as, helping with techical computer issues
-      - layout: right
-        title: GMU Geotechnical
-        sub_title: Lab Assistant
-        caption: December 2022 - January 2023 (Winter Break Temporary Job)
-        description: |
-          As a Lab Assistant I conducted comprehensive soil analysis' to state and federally regulated procedures. Analysis' included atterberg limits, maximum density curves, moisture contents, R-values, grain size seive analysis, and soil classifcations. Maintaining accurate records and filing systems with values by Lab Manager to be re-run next day if too high of an error.
+          A Field Training Officer (FTO) is responsible for providing on-the-job training and mentorship to new student Community Service Officers (CSO). They guide and evaluate trainees' performance, teach them proper procedures and protocols, and ensure their readiness for independent duty through hands-on training and assessment. As an FTO special duties are assigned to help maintain overall program success. Mine included public outreach, event planning and facilitating, as well as, helping with technical computer issues
 
       - layout: left
         sub_title: Community Service Officer
         caption: June 2022 - August 2023
         description: |
           A Community Service Officer (CSO) is a student-only non-sworn position within CSUF Police Department that focuses on community engagement, public safety, and support services. CSOs often patrol assigned areas, lockup campus after all classes conclude, respond to non-emergency calls, and engage with the community to address concerns and promote a safe environment. They provide a visible presence, assist with crime prevention initiatives, and act as a liaison between the primarily student community and law enforcement.
+        border: weak
+          
+      - layout: right
+        title: GMU Geotechnical
+        sub_title: Lab Assistant
+        caption: December 2022 - January 2023 (Winter Break Temporary Job)
+        description: |
+          As a Lab Assistant I conducted comprehensive soil analyses to state and federally regulated procedures. Analysis' included atterberg limits, maximum density curves, moisture contents, R-values, grain size sieve analysis, and soil classifications. Maintaining accurate records and filing systems with values by Lab Manager to be re-run next day if too high of an error.
+        border: weak
       - layout: left
         title: Coffee Bean and Tea Leaf
         sub_title: Barista
         caption: June 2020 - August 2022
         description: |
-          Provided me neccessary skills that are well-equiped for all pursueant jobs: Customer Service, Multitasking, Attention to Detail, Time Management, Problem Solving, Teamwork, Cleanliness and Hygiene, Sales and Upselling
+          Provided me necessary skills that are well-equipped for all pursuant jobs: Customer Service, Multitasking, Attention to Detail, Time Management, Problem Solving, Teamwork, Cleanliness and Hygiene, Sales and Upselling
 
   - title: Professional Conferences Attended
     layout: list
     content:
       - layout: middle
-        sub_title: Geological Socity of America, Cordilleran Section
-        caption: May 16th - 19th
+        sub_title: Geological Society of America, Cordilleran Section
+        caption: May 16th - 19th 2023
         description: |
-          Accepted and presented on my Detrital Zircon Database Management application. During the T30 Undergraduate Poster Session. [Abstract](https://gsa.confex.com/gsa/2023CD/meetingapp.cgi/Paper/387406) was presented on and my poster is seen [here](Burges-Jarrod-GSA-C-2023.pdf)
+          Accepted and presented on the Detrital Zircon Database Management application listed in Projects. During the T30 Undergraduate Poster Session. [Abstract](https://gsa.confex.com/gsa/2023CD/meetingapp.cgi/Paper/387406) was presented on and my poster can be viewed [here](Burges-Jarrod-GSA-C-2023.pdf)
 
 # Footer
 footer_show_references: true
