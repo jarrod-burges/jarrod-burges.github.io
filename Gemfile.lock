@@ -315,4 +315,4 @@ DEPENDENCIES
   erb (~> 4.0, >= 4.0.4)
 
 BUNDLED WITH
-   2.6.0
+   2.5.23
