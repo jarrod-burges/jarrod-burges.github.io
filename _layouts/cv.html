@@ -1,11 +1,51 @@
 ---
 layout: default
+title: "Curriculum Vitae"
 ---
 
-<!-- Redirect to the static PDF (opens in the browser or downloads,
-     depending on the visitor’s settings).  Change the path if needed. -->
-<meta http-equiv="refresh" content="0; url={{ "/assets/cv/Burges_Jarrod_CV_April25.pdf" | relative_url }}">
+<style>
+  /* Restrict to fixed PDF width */
+  .full-width-breakout {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 816px; /* or 794px for A4 */
+    padding: 2rem 0;
+  }
 
-<!-- Optional fallback link for very old browsers / screen readers -->
-<p>If you are not redirected automatically,
-  <a href="{{ "/assets/cv/Burges_Jarrod_CV_April25.pdf" | relative_url }}">view the PDF version of my CV</a>.</p>
+  /* Optional: background to visually center it */
+  body {
+    background-color: var(--oc-gray-9); /* match your theme */
+  }
+
+  .full-width-breakout h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .full-width-breakout iframe {
+    width: 100%;
+    height: 90vh;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    background-color: white;
+  }
+</style>
+
+<article>
+  {% include header.html %}
+  <main class="full-width-breakout">
+    <h1>Curriculum Vitae</h1>
+    <iframe
+            src="{{ "/Burges_Jarrod_CV_April25.pdf" | relative_url }}"
+    title="CV Viewer"
+    >
+    <p>Your browser does not support embedded PDFs.
+      <a href="{{ "/Burges_Jarrod_CV_April25.pdf" | relative_url }}">Download the PDF</a> instead.</p>
+    </iframe>
+  </main>
+  {% include footer.html %}
+</article>
