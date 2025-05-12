@@ -33,6 +33,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Compile LaTex CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: burges_jarrod_cv.tex
+          path: Burges_Jarrod_CV_${{ steps.date.outputs.date }}.pdf
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
