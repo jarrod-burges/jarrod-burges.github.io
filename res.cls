@@ -280,7 +280,8 @@
 \newskip\sectionskip
 \newdimen\resumewidth
 
-\resumewidth=6.5in
+\resumewidth=7.25in
+
 \sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
 
 \def\newsectionwidth#1{%
@@ -772,7 +773,7 @@
 % with everything in the left of its column
 
 \@secpenalty = -500
-\topmargin 0pt
+\topmargin -0.25pt
 \headheight 0pt
 \headsep 0pt
 \textheight 9in
@@ -791,7 +792,8 @@
 \parsep 2pt plus 2pt
 \itemsep \parsep}
 
-\pagestyle{empty}  % don't want page numbers
+
+
 
 \begin{format}
 \title{l}\employer{r}\\
