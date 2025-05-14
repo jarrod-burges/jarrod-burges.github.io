@@ -29,7 +29,7 @@
         }
 
         const urls = [
-            'assets/img/rock1.png',
+            '/assets/img/rock1.png',
             '/assets/img/rock2.png',
             '/assets/img/rock3.png',
             '/assets/img/rock4.png'

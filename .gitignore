@@ -7,3 +7,6 @@ vendor
 /.idea/jarrod-burges.github.io.iml
 /.idea/modules.xml
 /.idea/vcs.xml
+.DS_Store
+*/.DS_STORE
+burges_jarrod_cv.pdf
