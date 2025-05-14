@@ -8,6 +8,10 @@
 
 \usepackage[yyyymmdd]{datetime}
 \renewcommand{\dateseparator}{--}
+\newcommand\reverselabel[1]{%
+  \def\theenumi{}%
+  \renewcommand\makelabel{\makebox[\dimexpr\labelwidth-3pt\relax][r]{%
+    \the\numexpr#1-\value{enumi}+1\relax}}}%
 
 \newsectionwidth{0pt} % Stops section indenting
 \renewcommand{\headrulewidth}{0pt}
@@ -55,10 +59,11 @@ Thesis Advisor: Dr. Kathryn Metcalf \\
 %–––––––––––––––––––––––––––––––––––––––
 % CERTIFICATIONS
 %–––––––––––––––––––––––––––––––––––––––
-\section{\centerline{EDUCATION}} 
+\section{\centerline{CERTIFICATIONS}} 
 \vspace{8pt} 
 
 \begin{itemize}
+\setlength{\itemindent}{-.25in}
     \item California Geologist‑in‑Training (GIT) — Obtained October 2024
 \end{itemize}
 
@@ -70,6 +75,8 @@ Thesis Advisor: Dr. Kathryn Metcalf \\
 \vspace{8pt} 
 
 \begin{enumerate}
+\reverselabel{2}%
+\setlength{\itemindent}{-.25in}
   \item Metcalf,K. and \textbf{Burges,J.} (2024). GeoCORK: Part1. An improved workflow for geochronology data management. (In preparation; submission April2025)
   \item \textbf{Burges,J.} and Metcalf,K. (2024). GeoCORK: Part2 Technical specifications for future software development and expansion. (In preparation; submission April2025)
 \end{enumerate}
@@ -81,6 +88,7 @@ Thesis Advisor: Dr. Kathryn Metcalf \\
 \vspace{8pt} 
 
 \begin{itemize}
+\setlength{\itemindent}{-.25in}
   \item \textbf{Languages}: Python, SQL, R, Java, C++
   \item \textbf{Development}: JetBrainsIDESuite, RStudio, Git/GitHub
   \item \textbf{GIS}: ArcGIS Pro / ArcMap
@@ -98,6 +106,7 @@ Thesis Advisor: Dr. Kathryn Metcalf \\
 \textbf{Undergraduate Honors Thesis} — California State University, Fullerton \hfill October 2022–Present\\
 \emph{GeoCORK: An improved workflow for geochronology data management}
 \begin{itemize}
+
   \item Full‑stack development in Python, SQLite3, and PyQt6 across 52 normalized tables
   \item Designed automated data import, flexible filtering, and export to detritalPy, DzStats, IsoplotR
   \item Implemented custom tagging system and UI for complex geological datasets
@@ -153,6 +162,7 @@ Overseeing supervisor for 35 student CSOs. Managed scheduling, payroll, and fiel
 \section{\centerline{SELECTED AWARDS}}
 \vspace{16pt} 
 \begin{itemize}
+\setlength{\itemindent}{-.25in}
   \item Natural Sciences and Mathematics Inter-Club Council Travel Award (\$750), California State University,Fullerton (November 2024)
   \item Armstrong-Butcher Undergraduate Geology Conference Travel Award (\$500), California State University, Fullerton (November 2024)
   \item Undergraduate Research Opportunity Center (UROC) Travel Award (\$500), California State University, Fullerton (November 2024) 
@@ -166,9 +176,12 @@ Overseeing supervisor for 35 student CSOs. Managed scheduling, payroll, and fiel
 %–––––––––––––––––––––––––––––––––––––––
 % MEETING ABSTRACTS (selected)
 %–––––––––––––––––––––––––––––––––––––––
-\section{\centerline{SELECT AWARDS}}
+\section{\centerline{MEETING ABSTRACTS}}
 \vspace{16pt} 
+
 \begin{enumerate}
+\reverselabel{10}%
+\setlength{\itemindent}{-.25in}
   \item \textbf{Burges,J.} and Metcalf, K., 2024, DESKTOP APPLICATION TO MANAGE AND STORE DETRITAL ZIRCON
 GEOCHRONOLOGICAL DATA IN A SQL DATABASE: Abstract V23B-3335 presented at 2024 American
 Geophysical Union Annual Meeting, Washington, DC, 9-13 December.
