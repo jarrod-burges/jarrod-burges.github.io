@@ -40,16 +40,11 @@ title: "Curriculum Vitae"
 <article>
   {% include header.html %}
   <main class="full-width-breakout">
-    <h1>Curriculum Vitae</h1>
-    <!-- object tag often works better than iframe on mobile -->
-    <object
-      data="{{ "/burges_jarrod_cv.pdf" | relative_url }}"
-      type="application/pdf"
-      aria-label="CV Viewer">
-      <p>Your browser doesn’t support PDFs.
-         <a href="{{ "/burges_jarrod_cv.pdf" | relative_url }}">Download the PDF</a>.
-      </p>
-    </object>
-  </main>
+  <h1>Curriculum Vitae</h1>
+  <embed
+    class="pdf-embed"
+    src="{{ "/burges_jarrod_cv.pdf" | relative_url }}"
+    type="application/pdf" />
+</main>
   {% include footer.html %}
 </article>
