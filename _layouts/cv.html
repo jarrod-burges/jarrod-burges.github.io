@@ -3,19 +3,20 @@ layout: default
 title: "Curriculum Vitae"
 ---
 
+<!-- make sure this is in your default <head> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-  /* Restrict to fixed PDF width */
+  /* allow container to shrink below 816px */
   .full-width-breakout {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 816px; /* or 794px for A4 */
-    padding: 2rem 0;
+    max-width: 816px;      /* fixed max for A4-like width */
+    width: 100%;           /* fluid under that */
+    margin: 0 auto;        /* center on larger screens */
+    padding: 2rem 1rem;    /* slight side padding on mobile */
   }
 
-  /* Optional: background to visually center it */
   body {
-    background-color: var(--oc-gray-9); /* match your theme */
+    background-color: var(--oc-gray-9);
   }
 
   .full-width-breakout h1 {
@@ -25,7 +26,8 @@ title: "Curriculum Vitae"
     color: white;
   }
 
-  .full-width-breakout iframe {
+  .full-width-breakout object,
+  .full-width-breakout embed {
     width: 100%;
     height: 90vh;
     border: none;
@@ -39,13 +41,15 @@ title: "Curriculum Vitae"
   {% include header.html %}
   <main class="full-width-breakout">
     <h1>Curriculum Vitae</h1>
-    <iframe
-            src="{{ "/burges_jarrod_cv.pdf" | relative_url }}"
-    title="CV Viewer"
-    >
-    <p>Your browser does not support embedded PDFs.
-      <a href="{{ "/burges_jarrod_cv.pdf" | relative_url }}">Download the PDF</a> instead.</p>
-    </iframe>
+    <!-- object tag often works better than iframe on mobile -->
+    <object
+      data="{{ "/burges_jarrod_cv.pdf" | relative_url }}"
+      type="application/pdf"
+      aria-label="CV Viewer">
+      <p>Your browser doesn’t support PDFs.
+         <a href="{{ "/burges_jarrod_cv.pdf" | relative_url }}">Download the PDF</a>.
+      </p>
+    </object>
   </main>
   {% include footer.html %}
 </article>
