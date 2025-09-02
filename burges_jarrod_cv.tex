@@ -1,8 +1,44 @@
 
 \documentclass{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
 
-\usepackage{helvet} % Default font is the helvetica postscript font
-%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+\usepackage{fontspec}
+
+% Set the main font to JetBrains Mono
+\setmainfont[
+  Path=./JetBrainsMono/,
+  Scale=0.85,
+  Extension = .ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic
+]{JetBrainsMono}
+
+% Force sans and mono families to also use JetBrains Mono
+\setsansfont[
+  Path=./JetBrainsMono/,
+  Scale=0.85,
+  Extension = .ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic
+]{JetBrainsMono}
+
+\setmonofont[
+  Path=./JetBrainsMono/,
+  Scale=0.85,
+  Extension = .ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic
+]{JetBrainsMono}
+
+% Optional: redefine family defaults so everything uses the mono font
+\renewcommand{\rmdefault}{\ttdefault}
+\renewcommand{\sfdefault}{\ttdefault}
+
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \hypersetup {colorlinks=true,allcolors=blue}
@@ -38,14 +74,14 @@
 %–––––––––––––––––––––––––––––––––––––––
 % RESEARCH INTERESTS
 %–––––––––––––––––––––––––––––––––––––––
-\section{\centerline{Research Interests}}
+\section{\centerline{RESEARCH INTERESTS}}
 Utilizing machine learning to solve geological questions using big data, with specific interests in developing models to understand geochemical and optical–petrographic micro‑signatures. Passionate about building geoscience cyberinfrastructure to accelerate data analysis.
 
 %–––––––––––––––––––––––––––––––––––––––
 % EDUCATION
 %–––––––––––––––––––––––––––––––––––––––
 
-\section{\centerline{Education}} 
+\section{\centerline{EDUCATION}} 
 \vspace{8pt}
 
 {\sl Doctor of Philosophy}, Earth and Planetary Sciences \hfill Expected May 2030 \\
@@ -60,7 +96,7 @@ Thesis: GeoCORK: An improved workflow for geochronology data management
 %–––––––––––––––––––––––––––––––––––––––
 % CERTIFICATIONS
 %–––––––––––––––––––––––––––––––––––––––
-\section{\centerline{Certifications}} 
+\section{\centerline{CERTIFICATIONS}} 
 \vspace{8pt} 
 
 \begin{itemize}
