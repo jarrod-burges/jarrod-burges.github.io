@@ -1,7 +1,7 @@
-title: jarrod burges
+title: jarrod m. burges
 description:
 baseurl: ""
-url: https://jarrod-burges.github.io
+url: https://jarrodburges.com
 
 theme: cvless
 
@@ -12,7 +12,7 @@ cv: true
 
 # author settings
 author:
-  name: Jarrod Burges
+  name: Jarrod M. Burges
   email:
 photo: assets/img/profile.jpeg
 address:

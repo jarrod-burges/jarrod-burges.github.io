@@ -1,4 +1,13 @@
 <div id="particles-js" class="fullscreen">
+    <div class="site-header-inner">
+      <a href="{{ "/" | relative_url }}" class="site-logo">
+      jarrod m. burges
+      </a>
+      <nav class="site-nav">
+        <a href="projects">projects</a>
+        <a href="cv">curriculum vitae</a>
+      </nav>
+    </div>
   <div class="jumbotron text-center">
     {% if site.photo %}
     <img class="particles-photo" src="{{ site.photo }}" />
@@ -22,7 +31,7 @@
       <a class="particles-icon" href="{{ site.profile.instagram }}">{% include svg/instagram.svg %}</a>
       {% endif %}
       {% if site.profile.linkedin %}
-      <a class="particles-icon" href="{{ site.profile.linkedin }}">{% include svg/linkedin.svg %}</a>
+      <a class="particles-icon" href="{{ site.profile.linkedin }}", target="_blank">{% include svg/linkedin.svg %}</a>
       {% endif %}
       {% if site.profile.xing %}
       <a class="particles-icon" href="{{ site.profile.xing }}">{% include svg/xing.svg %}</a>
@@ -34,16 +43,16 @@
       <a class="particles-icon" href="{{ site.profile.medium }}">{% include svg/medium.svg %}</a>
       {% endif %}
       {% if site.profile.orcid %}
-      <a class="particles-icon" href="{{ site.profile.orcid }}">{% include svg/orcid.svg %}</a>
+      <a class="particles-icon" href="{{ site.profile.orcid }}", target="_blank">{% include svg/orcid.svg %}</a>
       {% endif %}
       {% if site.profile.github %}
-      <a class="particles-icon" href="{{ site.profile.github }}">{% include svg/github.svg %}</a>
+      <a class="particles-icon" href="{{ site.profile.github }}", target="_blank">{% include svg/github.svg %}</a>
       {% endif %}
       {% if site.author.email %}
       <a class="particles-icon" href="mailto:{{ site.author.email }}">{% include svg/mail.svg %}</a>
       {% endif %}
       {% if site.profile.cv != false %}
-      <a class="particles-icon" href="cv">{% include svg/cv-circled.svg %}</a>
+      <a class="particles-icon" href="cv", target="_blank">{% include svg/cv-circled.svg %}</a>
       {% endif %}
     </div>
   </div>

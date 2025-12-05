@@ -97,3 +97,26 @@
     transform: scale(2.7);
   }
 }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 20, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  margin-left: auto;  /* <-- RIGHT JUSTIFIED */
+  display: flex;
+  gap: 1rem;
+  min-height: 30px;
+}
