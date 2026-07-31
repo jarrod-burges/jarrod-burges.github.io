@@ -40,10 +40,17 @@
 
 \usepackage[yyyymmdd]{datetime}
 \renewcommand{\dateseparator}{--}
+
 \newcommand\reverselabel[1]{%
   \def\theenumi{}%
-  \renewcommand\makelabel{\makebox[\dimexpr\labelwidth-3pt\relax][r]{%
-    \the\numexpr#1-\value{enumi}+1\relax}}}%
+  \renewcommand\makelabel[1]{%
+    \def\tmp{##1}%
+    \ifx\tmp\empty
+      \null
+    \else
+      \makebox[\dimexpr\labelwidth-3pt\relax][r]{%
+        \the\numexpr#1-\value{enumi}+1\relax.}%
+    \fi}}
 
 \newsectionwidth{0pt} % Stops section indenting
 \renewcommand{\headrulewidth}{0pt}
@@ -63,7 +70,8 @@
 \name{Jarrod M. Burges, GIT\\ \\}
 \address{\bf Wright-Rieman Laboratories \\610 Taylor Road, Room 142 \\ Dept. of Earth and Planetary Sciences \\ Rutgers, The State University of New Jersey \\ Piscataway, NJ 08854-8066 }
 \address{\\\href{mailto:jarrod.burges@rutgers.edu}{jarrod.burges@rutgers.edu} \\ \hfill
-\href{http://jarrodburges.com}{jarrodburges.com}}
+\href{http://jarrodburges.com}{jarrodburges.com} \\ \hfill
+\href{https://orcid.org/0009-0007-9044-1174}{ORCID}}
 
 \begin{resume}
 %–––––––––––––––––––––––––––––––––––––––
@@ -75,21 +83,18 @@ My primary research interests involve exploring the applications of machine lear
 %–––––––––––––––––––––––––––––––––––––––
 % EDUCATION
 %–––––––––––––––––––––––––––––––––––––––
-
 \section{\Large{EDUCATION}} 
-\vspace{8pt}
+\vspace{-6pt}
 
-{\bf Doctor of Philosophy, Earth and Planetary Sciences} \hfill Expected May 2030 \\
-{\sl Focus: Geochemistry and Machine Learning} \\
-Rutgers University – New Brunswick \\
-Thesis Advisor: Dr. Shaunna M. Morrison \\
-Working Thesis: \textit{Machine Learning In The Geosciences: Case Studies in Mantle Heterogeneity, Zircon Paragnesis, and Petrography}
-
-{\bf Bachelor of Science, Computer Science \& Geological Sciences} \hfill December 2024 \\
-{\sl Focus: Geochronology and Software Engineering} \\
-California State University – Fullerton  \\
-Thesis Advisor: Dr. Kathryn Metcalf \\
-Thesis: GeoCORK: An improved workflow for U-Pb geochronology data management
+\begin{tabbing}
+Expected 2030----------\= \kill
+Expected 2030 \> Ph.D. Earth and Planetary Sciences - Rutgers University -- New Brunswick \\ \> Advisor: Shaunna M. Morrison \\
+[6pt]
+2024 \> B.Sc. Geological Sciences - California State University -- Fullerton \\ 
+\> Advisor: Kathryn Metcalf \\
+\> Thesis: GeoCORK: An improved workflow for U-Pb geochronology data management \\ [6pt]
+2024 \> B.Sc. Computer Science - California State University -- Fullerton \\ 
+\end{tabbing}
 
 %–––––––––––––––––––––––––––––––––––––––
 % PUBLICATIONS
@@ -100,7 +105,7 @@ Thesis: GeoCORK: An improved workflow for U-Pb geochronology data management
 \reverselabel{3}
     \item \textbf{Burges, J.M.}, Codillo, E.A, Goltz, A.E, and Prabhu, A. (2026). An Approach To Mantle Heterogeity Through Multiple Machine Learning Methods. \textit {In prep}
   \item \textbf{Burges, J.M.}, Yakymchuk, C., DiMaio, M., Lui, C.C., and Morrison, S.M. (2026). Metamorphic or igneous zircon? Classification through rare earth elements, machine learning, and logistic regression. \textit {In review Journal of Metamorphic Geology}
-  \item Metcalf, K. and \textbf{Burges, J.M} (2026). GeoCORK: An improved workflow for U-Pb geochronology data management: Applied Computing and Geosciences, p. 100364, \href{doi:10.1016/j.acags.2026.100364}{doi:10.1016/j.acags.2026.100364}.
+  \item Metcalf, K. and \textbf{Burges, J.M.} (2026). GeoCORK: An improved workflow for U-Pb geochronology data management: Applied Computing and Geosciences, p. 100364, \href{doi:10.1016/j.acags.2026.100364}{doi:10.1016/j.acags.2026.100364}.
 \end{enumerate}
 
 %–––––––––––––––––––––––––––––––––––––––
@@ -119,9 +124,10 @@ Thesis: GeoCORK: An improved workflow for U-Pb geochronology data management
 %–––––––––––––––––––––––––––––––––––––––
 % RESEARCH AWARDS
 %–––––––––––––––––––––––––––––––––––––––
-\section{\Large{PENDING GRANTS - Total: \$969,120}}
-Collaborative Research: CAIG: OnePetrographer: Developing High-Resolution Vision CNNs \hfill \$969,120 \\
-For Optical Mineralogy and Petrology, NSF, PI: Morrison, \textbf{Co-PI: Burges}, (submitted February 2026).
+% \section{\Large{PENDING GRANTS - Total: \$0}}
+
+% Collaborative Research: CAIG: OnePetrographer: Developing High-Resolution Vision CNNs \hfill \$969,120 \\
+% For Optical Mineralogy and Petrology, NSF, PI: Morrison, \textbf{Co-PI: Burges}, (submitted February 2026).
 
 %–––––––––––––––––––––––––––––––––––––––
 % SELECTED AWARDS
@@ -165,7 +171,7 @@ For Optical Mineralogy and Petrology, NSF, PI: Morrison, \textbf{Co-PI: Burges},
 %–––––––––––––––––––––––––––––––––––––––
 % RESEARCH EXPERIENCE
 %–––––––––––––––––––––––––––––––––––––––
-\section{\Large{RESEARCH EXPERIENCE}} 
+\section{\Large{PROFESSIONAL EXPERIENCE}} 
 
 \textbf{Graduate Student Researcher}  - Rutgers University \hfill September 2025–Present
 
@@ -244,6 +250,12 @@ Provided lab instruction for 25 students and delivered a seminar on AI applicati
 % GSA Conference Oct 2026
 % AGU Conference Dec 2026
 
+% figure out superscript notes for 
+% *  Co-first author
+% ^ Corresponding Author
+% # Mentee Publication
+
+
 \section{\Large{ORAL MEETING ABSTRACTS}}
 
 \begin{enumerate}
@@ -252,6 +264,7 @@ Provided lab instruction for 25 students and delivered a seminar on AI applicati
 %----------
 % 2026 (2)
 %----------
+\item[] \hspace*{-24pt}\textbf{\large 2026}
 
 \item \textbf{Burges, J.M.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Metamorphic or igneous zircon? Classification through rare earth elements, machine learning, and logistic regression: Presented at 2026 International Mineralogical Association General Meeting, Nanjing, China, 20-24 August.
 
@@ -260,6 +273,8 @@ Provided lab instruction for 25 students and delivered a seminar on AI applicati
 %----------
 % 2025 (3)
 %----------
+\item[] \hspace*{-24pt}\textbf{\large 2025}
+
 \item Earth Science Information Partners and Geological Society of America, 2025, Data Help Desk @ GSA Connects 2025:, doi:10.5281/ZENODO.17458264.
 
 \item \textbf{Burges, J.M.} and Metcalf, K., 2025, GeoCORK: A Desktop Application to Manage U-Pb Geochronology Data: 
@@ -271,6 +286,7 @@ Abstract 287 T52-2 presented at 2025 Geological Society of America Annual Meetin
 %----------
 % 2024 (3)
 %----------
+\item[] \hspace*{-24pt}\textbf{\large 2024}
 
 \item \textbf{Burges, J.} and Metcalf, K., 2024, DESKTOP APPLICATION TO MANAGE AND STORE DETRITAL ZIRCON
 GEOCHRONOLOGICAL DATA IN A SQL DATABASE: Abstract 59-4 presented at 2024 Geological Society of
@@ -293,36 +309,41 @@ DETRITAL ZIRCON GEOCHRONOLOGICAL DATA IN A SQL DATABASE: Abstract
 \section{\Large{POSTER MEETING ABSTRACTS}}
 
 \begin{enumerate}
-\reverselabel{15}%
+\reverselabel{16}%
 
 %----------
-% 2026 (5) Poster 
+% 2026 (7) Poster 
 %----------
+\item[] \hspace*{-24pt}\textbf{\large 2026}
 
-% Add SEG abstract
+\item \textbf{Burges, J.}, DiMaio, M.P., Grosso, J.C., Godfrey, L.V, and Morrison, S.M., 2026, Reapproaching Iron Deposit Discrimination Through Magnetite Geochemistry and Machine Learning: Presented at 2026 Society of Economic Geologists Annual Meeting, Salt Lake City, Utah, 30 Septemper-3 October.
 
-\item \textbf{Burges, J.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Differentiating metamorphic and igneous zircons: Applications of machine learning on rare earth elements with newly derived formulas: Presented at 2026 MSE-EPS Research Mixer, New Brunswick, New Jersey, 12 May.
+\item \textbf{Burges, J.M.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Differentiating metamorphic and igneous zircons: Applications of machine learning on rare earth elements with newly derived formulas: Presented at 2026 MSE-EPS Research Mixer, New Brunswick, New Jersey, 12 May.
 
 \item Grosso, J.C., \textbf{Burges, J.M.}, DiMaio, M.P., Godrey, L.V., and Morrison, S.M., 2026, Examining magnetite data for discriminant analysis using machine learning: Presented at 2026 Rutgers Annual Research Day, New Brunswick, New Jersey, 5 May.
 
-\item \textbf{Burges, J.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Differentiating metamorphic and igneous zircons: Applications of machine learning on rare earth elements with newly derived formulas: Presented at 2026 Rutgers Annual Research Day, New Brunswick, New Jersey, 5 May.
+\item \textbf{Burges, J.M.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Differentiating metamorphic and igneous zircons: Applications of machine learning on rare earth elements with newly derived formulas: Presented at 2026 Rutgers Annual Research Day, New Brunswick, New Jersey, 5 May.
 
-\item Gutierrez, K., Cruz, R., Metcalf, K., \textbf{Burges, J.,} 2026, GeoCORK: Data Pipeline from SESAR2 for IGSN Sample Import: Presented at 2026 EPS Student Project Innovation Expo, Fullerton, California, 1 May.
+\item Gutierrez, K., Cruz, R., Metcalf, K., \textbf{Burges, J.M.,} 2026, GeoCORK: Data Pipeline from SESAR2 for IGSN Sample Import: Presented at 2026 ECS Student Project Innovation Expo, Fullerton, California, 1 May.
 
-\item Gutierrez, K., Cruz, R., Metcalf, K., \textbf{Burges, J.,} 2026, GeoCORK: Data Pipeline from SESAR2 for IGSN Sample Import: Presented at 2026 Department of Geological Sciences Research Day, Fullerton, California, 24 April.
+\item Gutierrez, K., Cruz, R., Metcalf, K., \textbf{Burges, J.M.,} 2026, GeoCORK: Data Pipeline from SESAR2 for IGSN Sample Import: Presented at 2026 Department of Geological Sciences Research Day, Fullerton, California, 24 April.
 
-\item \textbf{Burges, J.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Differentiating metamorphic and igneous zircons: Applications of machine learning on rare earth elements with newly derived formulas: Presented at 2026 Mineralogical Society of America Annual Meeting, Tucson, AZ, 16-19 February.
+\item \textbf{Burges, J.M.}, Yakymchuk, C., DiMaio, M.P., Lui, T.C.C., and Morrison, S.M., 2026, Differentiating metamorphic and igneous zircons: Applications of machine learning on rare earth elements with newly derived formulas: Presented at 2026 Mineralogical Society of America Annual Meeting, Tucson, AZ, 16-19 February.
 
 %----------
 % 2025 (1)
 %----------
-\item Metcalf, K. and \textbf{Burges, J.} 2025, GeoCORK: A Desktop Application to Manage U-Pb Geochronology Data: Abstract IN23C presented at 2025 American 
+\item[] \hspace*{-24pt}\textbf{\large 2025}
+
+\item Metcalf, K. and \textbf{Burges, J.M.} 2025, GeoCORK: A Desktop Application to Manage U-Pb Geochronology Data: Abstract IN23C presented at 2025 American 
 Geophysical Union Annual Meeting, New Orleans, LA, 15-19 December.
 
 %----------
 % 2024 (4)
 %----------
-\item \textbf{Burges, J.} and Metcalf, K., 2024, DESKTOP APPLICATION TO MANAGE AND STORE DETRITAL ZIRCON
+\item[] \hspace*{-24pt}\textbf{\large 2024}
+
+\item \textbf{Burges, J.M.} and Metcalf, K., 2024, DESKTOP APPLICATION TO MANAGE AND STORE DETRITAL ZIRCON
 GEOCHRONOLOGICAL DATA IN A SQL DATABASE: Abstract V23B-3335 presented at 2024 American 
 Geophysical Union Annual Meeting, Washington, DC, 9-13 December.
 
@@ -341,6 +362,8 @@ Research Day, Fullerton, California, 3 May.
 %----------
 % 2023 (4)
 %----------
+\item[] \hspace*{-24pt}\textbf{\large 2023}
+
 \item \textbf{Burges, J.}, and Metcalf, K., 2023, DESKTOP APPLICATION TO MANAGE AND STORE
 DETRITAL ZIRCON GEOCHRONOLOGICAL DATA IN A SQL DATABASE: Abstract
 46-6 presented at 2023 Geological Society of America Annual Meeting, Pittsburgh, Philadelphia, 15-18
@@ -364,18 +387,19 @@ Sciences Research Day, Fullerton, California, 5 May
 % TECHNICAL SESSION CONVENOR
 %–––––––––––––––––––––––––––––––––––––––
 
-% datathons UIdaho June 2024, Rutgers Nov 2024, Rutgers 2025
+% datathons UIdaho June 2024, Rutgers Nov 2024, Rutgers 2025, Carnegie 2026
 
 
 \section{\Large{SCIENTIFIC MEETING ORGANIZATION}} 
 % Todo condense into each meeting and use semi colons between
 \begin{enumerate}
-\reverselabel{5}%
-    \item Material Sciences \& Earth and Planetary Sciences Joint Research Mixer: Co-Lead, Rutgers University (May 2026) 
-    \item Geoinformatics advances scientific discoveries: Machine Learning, Cyberinfrastructure, and Open Data in the digital geological era, Geological Society of America Connects 2026, Denver, CO
-    \item Geoinformatics and Data Science: A Showcase In Undergraduate and Graduate Student Research (Posters), Geological Society of America Connects 2026, Denver, CO
-    \item 59-T42. Open Science, Open Data: Geoinformatics and Why it Should be on Everyone’s Radar, Geological Society of America Connects 2024, Anaheim, CA
-    \item 38-T42. Open Science, Open Data: Geoinformatics and Why it Should be on Everyone’s Radar (Posters), Geological Society of America Connects 2024, Anaheim, CA
+\reverselabel{6}%
+    \item \textbf{Organizing Committee Member}, Envisioning the Future of Critical Minerals Cyberinfrastructure: NSF Conference Workshop (January 2027) 
+    \item \textbf{Co-Lead}, Material Sciences \& Earth and Planetary Sciences Joint Research Mixer: Rutgers University (May 2026) 
+    \item \textbf{Primary Advocate}, Geoinformatics advances scientific discoveries: Machine Learning, Cyberinfrastructure, and Open Data in the digital geological era, Geological Society of America Connects 2026, Denver, CO
+    \item \textbf{Primary Advocate}, Geoinformatics and Data Science: A Showcase In Undergraduate and Graduate Student Research (Posters), Geological Society of America Connects 2026, Denver, CO
+    \item \textbf{Convener}, 59-T42. Open Science, Open Data: Geoinformatics and Why it Should be on Everyone’s Radar, Geological Society of America Connects 2024, Anaheim, CA
+    \item \textbf{Convener}, 38-T42. Open Science, Open Data: Geoinformatics and Why it Should be on Everyone’s Radar (Posters), Geological Society of America Connects 2024, Anaheim, CA
     
 \end{enumerate}
 
@@ -418,7 +442,6 @@ Overseeing supervisor for 35 student CSOs. Managed scheduling, payroll, and fiel
 
 
 \begin{itemize}
-
   \item \textbf{Languages}: Python, SQL, R, Java, C++
   \item \textbf{Development}: JetBrains IDE Suite, RStudio, Git/GitHub
   \item \textbf{GIS}: ArcGIS Pro / Toolbox
