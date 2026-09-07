@@ -26,25 +26,53 @@ title: "Curriculum Vitae"
     color: white;
   }
 
-  .full-width-breakout object,
-  .full-width-breakout embed {
+  #pdf-viewer {
     width: 100%;
-    height: 90vh;
-    border: none;
+    max-height: 90vh;
+    overflow-y: auto;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     background-color: white;
+  }
+
+  #pdf-viewer canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
   }
 </style>
 
 <article>
   {% include header.html %}
   <main class="full-width-breakout">
-  <h1>Curriculum Vitae</h1>
-  <embed
-    class="pdf-embed"
-    src="{{ "/burges_jarrod_cv.pdf" | relative_url }}"
-    type="application/pdf" />
-</main>
+    <h1>Curriculum Vitae</h1>
+    <div id="pdf-viewer"></div>
+  </main>
   {% include footer.html %}
 </article>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
+<script type="module">
+  import * as pdfjsLib from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs";
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
+
+  const url = "{{ "/burges_jarrod_cv.pdf" | relative_url }}";
+  const container = document.getElementById("pdf-viewer");
+
+  pdfjsLib.getDocument(url).promise.then(async (pdf) => {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const scale = 2; // render at 2x for sharpness on retina screens
+      const viewport = page.getViewport({ scale });
+
+      const canvas = document.createElement("canvas");
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+      container.appendChild(canvas);
+    }
+  });
+</script>
