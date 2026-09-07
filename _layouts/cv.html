@@ -26,6 +26,18 @@ title: "Curriculum Vitae"
     color: white;
   }
 
+  .download-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
   #pdf-viewer {
     width: 100%;
     max-height: 90vh;
@@ -47,6 +59,7 @@ title: "Curriculum Vitae"
   {% include header.html %}
   <main class="full-width-breakout">
     <h1>Curriculum Vitae</h1>
+    <a class="download-btn" href="{{ "/burges_jarrod_cv.pdf" | relative_url }}" download>Download CV</a>
     <div id="pdf-viewer"></div>
   </main>
   {% include footer.html %}
