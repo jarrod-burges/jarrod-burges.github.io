@@ -57,19 +57,44 @@
 
 \usepackage[headheight=42pt,tmargin=42pt,headsep=5pt,textwidth=7in,bmargin=50pt]{geometry}
 \pagestyle{fancy}
+
 \fancyhf{}
 \rfoot{\textit{Updated \today}}
 
 \lfoot{\thepage}
 
-\begin{document}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\definecolor{headerbar}{HTML}{CC0033} % Rutgers scarlet
 
+\newcommand{\firstpageheader}{%
+  \AddToShipoutPictureBG*{%
+    \AtPageUpperLeft{\raisebox{-0.6in}[0pt][0pt]{\color{headerbar}\rule{\paperwidth}{0.6in}}}%
+    \AtPageUpperLeft{\raisebox{-0.55in}[0pt][0pt]{\hspace*{0.5in}\includegraphics[height=0.5in]{rutgersblack.png}}}%
+        \AtPageUpperLeft{\raisebox{-0.37in}[0pt][0pt]{\makebox[\paperwidth][r]{%
+      \color{black}\bfseries\huge\textbf{Jarrod M. Burges, GIT} \hspace*{0.5in}}}}%
+  }%
+
+}
+% \AddToShipoutPictureBG{%
+%   \AtPageLowerLeft{\raisebox{0pt}[0pt][0pt]{\color{headerbar}\rule{\paperwidth}{10pt}}}%
+% }
+
+\begin{document}
+\AddToShipoutPictureBG{%
+  \ifnum\value{page}>1
+    \AtPageUpperLeft{\raisebox{-10pt}[0pt][0pt]{\color{headerbar}\rule{\paperwidth}{10pt}}}%
+  \fi
+}
+
+\firstpageheader
 %–––––––––––––––––––––––––––––––––––––––
 % PERSONAL DATA
 %–––––––––––––––––––––––––––––––––––––––
-\name{Jarrod M. Burges, GIT\\ \\}
-\address{\bf Wright-Rieman Laboratories \\610 Taylor Road, Room 142 \\ Dept. of Earth and Planetary Sciences \\ Rutgers, The State University of New Jersey \\ Piscataway, NJ 08854-8066 }
-\address{\\\href{mailto:jarrod.burges@rutgers.edu}{jarrod.burges@rutgers.edu} \\ \hfill
+% \name{Jarrod M. Burges, GIT\\ \\}
+\address{\bf Wright-Rieman Laboratories \\610 Taylor Road, Room 142 \\ Piscataway, NJ 08854-8066 }
+\address{\href{mailto:jarrod.burges@rutgers.edu}{jarrod.burges@rutgers.edu} \\ \hfill
 \href{http://jarrodburges.com}{jarrodburges.com} \\ \hfill
 \href{https://orcid.org/0009-0007-9044-1174}{ORCID} | \href{https:///www.linkedin.com/in/jarrod-burges}{LinkedIn} }
 
