@@ -54,32 +54,11 @@ title: "Curriculum Vitae"
   }
 
   .pdf-page {
-    position: relative;
     margin: 0 auto 1.5rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     border-radius: 4px;
     overflow: hidden;
     background-color: white;
-  }
-
-  .textLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    line-height: 1;
-  }
-
-  .textLayer span {
-    color: transparent;
-    position: absolute;
-    white-space: pre;
-    cursor: text;
-    transform-origin: 0% 0%;
-  }
-
-  .textLayer ::selection {
-    background: rgba(0, 100, 255, 0.3);
   }
 </style>
 
@@ -104,7 +83,7 @@ title: "Curriculum Vitae"
 
   pdfjsLib.getDocument(url).promise.then(async (pdf) => {
     const containerWidth = container.clientWidth || 800;
-    const outputScale = window.devicePixelRatio || 1;
+    const outputScale = Math.max(window.devicePixelRatio || 1, 2);
 
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
@@ -123,23 +102,10 @@ title: "Curriculum Vitae"
       canvas.style.height = viewport.height + "px";
       pageDiv.appendChild(canvas);
 
-      const textLayerDiv = document.createElement("div");
-      textLayerDiv.className = "textLayer";
-      textLayerDiv.style.width = viewport.width + "px";
-      textLayerDiv.style.height = viewport.height + "px";
-      pageDiv.appendChild(textLayerDiv);
-
       container.appendChild(pageDiv);
 
       const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
       await page.render({ canvasContext: canvas.getContext("2d"), viewport, transform }).promise;
-
-      const textContent = await page.getTextContent();
-      await new pdfjsLib.TextLayer({
-        textContentSource: textContent,
-        container: textLayerDiv,
-        viewport,
-      }).render();
     }
   });
 </script>

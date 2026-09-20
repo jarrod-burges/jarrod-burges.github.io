@@ -23,6 +23,10 @@ profile:
   linkedin: https://www.linkedin.com/in/jarrod-burges
   orcid: https://orcid.org/0009-0007-9044-1174
   github: https://github.com/jarrod-burges
+  googlescholar: https://scholar.google.com/citations?user=vxFfKXgAAAAJ&hl=en
+  clarivate: https://www.webofscience.com/wos/author/record/RCG-8037-2026
+  researchgate: https://www.researchgate.net/profile/Jarrod-Burges
+  scopus: https://www.scopus.com/authid/detail.uri?authorId=60297955800
 
 # build settings
 permalink: pretty
