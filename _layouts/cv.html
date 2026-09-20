@@ -43,20 +43,23 @@ title: "Curriculum Vitae"
     max-height: 90vh;
     overflow-y: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    background-color: white;
+    background-color: var(--oc-gray-9);
+    padding: 1rem 0;
   }
 
   #pdf-viewer canvas {
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: 4px;
   }
 
   .pdf-page {
     position: relative;
-    margin-bottom: 4px;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
   }
 
   .textLayer {
@@ -83,10 +86,10 @@ title: "Curriculum Vitae"
 <article>
   {% include header.html %}
   <main class="full-width-breakout">
-  <h1>Curriculum Vitae</h1>
-  <a class="download-btn" href="{{ "/burges_jarrod_cv.pdf" | relative_url }}" download>Download CV</a>
-  <div id="pdf-viewer"></div>
-</main>
+    <h1>Curriculum Vitae</h1>
+    <a class="download-btn" href="{{ "/burges_jarrod_cv.pdf" | relative_url }}" download>Download CV</a>
+    <div id="pdf-viewer"></div>
+  </main>
   {% include footer.html %}
 </article>
 
@@ -94,7 +97,7 @@ title: "Curriculum Vitae"
 <script type="module">
   import * as pdfjsLib from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs";
   pdfjsLib.GlobalWorkerOptions.workerSrc =
-    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
 
   const url = "{{ "/burges_jarrod_cv.pdf" | relative_url }}";
   const container = document.getElementById("pdf-viewer");
