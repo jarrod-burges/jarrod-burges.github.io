@@ -45,13 +45,9 @@ jobs:
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.2' # Not needed with a .ruby-version file
+          ruby-version: '3.3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 1 # Bumped from 0 to discard the cache from the failed commonmarker build
-        env:
-          # Fix commonmarker 0.23.x native extension build (unknown type name 'bool')
-          CFLAGS: "-std=gnu99"
-          BUNDLE_BUILD__COMMONMARKER: "--with-cflags=-std=gnu99"
+          cache-version: 2 # Bumped to discard the cache from the failed commonmarker builds
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
