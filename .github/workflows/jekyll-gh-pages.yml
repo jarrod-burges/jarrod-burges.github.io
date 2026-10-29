@@ -47,7 +47,11 @@ jobs:
         with:
           ruby-version: '3.2' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          cache-version: 1 # Bumped from 0 to discard the cache from the failed commonmarker build
+        env:
+          # Fix commonmarker 0.23.x native extension build (unknown type name 'bool')
+          CFLAGS: "-std=gnu99"
+          BUNDLE_BUILD__COMMONMARKER: "--with-cflags=-std=gnu99"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
